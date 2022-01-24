@@ -12,10 +12,10 @@ deleteAll.addEventListener('click', removeTaskItems);
 function addItem(e) {
     e.preventDefault();
 
-    
     // GET INPUT VALUE  
     const newItem = document.getElementById('form-input').value
-    
+
+        
     // CREATE LI ELEMENT AND GIVE IT A CLASS NAME
     const taskItem = document.createElement('li');
     taskItem.className = 'list-item'; 
@@ -47,7 +47,12 @@ function addItem(e) {
 function removeItem(e) {
     if (e.target.classList.contains('delete')) {
         const taskItem = e.target.parentElement;
+        taskItem.classList.toggle('fade');
+        setTimeout(() => {
         ul.removeChild(taskItem);
+    }, 400)
+        
+
     }
 }
 
@@ -58,14 +63,23 @@ function removeTaskItems() {
 
     }
 
+// function checkInput() {
+//     const newItem = document.getElementById('form-input').value;
+//     if (newItem == '') {
+//         alert('Please enter something');
+        
+//     }
 
+    
+// }
 
 
 
 
 //OTHER FUNCTIONALITY JS
 
-// Change color scheme
+// Toggle importance
+// Add date
 
 
 // CSS

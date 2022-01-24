@@ -130,6 +130,10 @@ p {
     // border: 2px solid purple;
 }
 
+.fade {
+  animation: fade-out .3s linear;
+}
+
 button.btn {
     float: right;
 }
@@ -146,5 +150,16 @@ button.btn {
   to {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
   }
 }
