@@ -1,13 +1,18 @@
 const form = document.getElementById('form');
 const ul = document.getElementById('items');
+const deleteAll = document.getElementById('btn-delete-all');
+
 
 // Listen for a Submit Event on form
 form.addEventListener('submit', addItem);
 ul.addEventListener('click', removeItem);
+deleteAll.addEventListener('click', removeTaskItems);
+
 
 function addItem(e) {
     e.preventDefault();
 
+    
     // GET INPUT VALUE  
     const newItem = document.getElementById('form-input').value
     
@@ -32,6 +37,7 @@ function addItem(e) {
     // ADD THE NEW LI TO THE UL LIST
     ul.appendChild(taskItem);
     
+    form.reset();
 
     
 
@@ -45,13 +51,23 @@ function removeItem(e) {
     }
 }
 
+function removeTaskItems() {
+        
+    const list = document.getElementById('items');
+    while(list.firstChild) list.removeChild(list.firstChild);
+
+    }
+
+
+
+
+
 
 //OTHER FUNCTIONALITY JS
 
-// Remove all Items
 // Change color scheme
-// 
+
 
 // CSS
 
-// Add Animation to Items being added
+

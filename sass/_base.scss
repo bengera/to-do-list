@@ -78,8 +78,8 @@ p {
 
 #form {
     
-    width: 60%;
-    max-width: 65%;
+    
+    max-width: 100%;
      
     
     
@@ -122,6 +122,7 @@ p {
 .list-item {
     margin-bottom: 1rem;
     background-color: $color-white;
+    border-top: 1px solid #393f49;
     border-radius: 10px;
     color: #000;
     padding: 0.4em 0.6em;
@@ -132,6 +133,7 @@ p {
 button.btn {
     float: right;
 }
+
 
 
 /*Animations*/
