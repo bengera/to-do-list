@@ -1,0 +1,148 @@
+// COLOR VARIABLES
+$color-light-blue: #61dbfb;
+$color-dark-grey: #393f49;
+$color-light-grey: #5e626a;
+$color-white: #fff;
+$color-green: rgb(86, 212, 86);
+
+
+@mixin transition-basic {
+  transition: all 0.3s;
+
+}
+
+
+// FONT VARIABLES
+$font-primary: 'Poppins',
+'sans-serif';
+$font-secondary: 'Raleway';
+
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // height: 100%;
+  // width: 100%;
+  
+  box-sizing: border-box;
+//   font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  @media only screen and (max-width: $bp-large) {
+    // font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    // font-size: 40%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    // font-size: 35%;
+  }
+
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-light-blue;
+}
+
+p {
+    color: $color-white;
+}
+
+.container {
+    background-color: $color-dark-grey;
+    margin-top: 5rem;
+    padding: 2rem;
+    width: 75%;
+    max-width: 700px;
+    position: relative;
+    border-radius: 15px;
+    }
+
+#form {
+    
+    width: 60%;
+    max-width: 65%;
+     
+    
+    
+}    
+
+.btn-primary {
+    background-color: $color-green;
+    border: 0;
+
+    &:focus,
+    &:link,
+    &:active
+     {
+        background-color: $color-green;
+    }
+
+    &:visited,
+    &:hover {
+        background-color: $color-green;
+    }
+}
+
+
+/*List items*/
+
+.list-group-container {
+   
+    margin-top: 2rem; 
+    gap: 10px;
+    // border: 2px solid red;
+}
+
+.list-group {
+    list-style: none;
+    color: $color-white;
+    // border: 2px solid hotpink;
+    
+}
+
+.list-item {
+    margin-bottom: 1rem;
+    background-color: $color-white;
+    border-radius: 10px;
+    color: #000;
+    padding: 0.4em 0.6em;
+    animation: append-animate .3s linear;
+    // border: 2px solid purple;
+}
+
+button.btn {
+    float: right;
+}
+
+
+/*Animations*/
+
+@keyframes append-animate {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
