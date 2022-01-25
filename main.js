@@ -31,9 +31,8 @@ function addItem(e) {
     deleteBtn.appendChild(document.createTextNode('X'));
     taskItem.appendChild(deleteBtn);
 
-    // setTimeout(() => {
-        
-    // }, 500)
+    updateCheckAdd();
+   
     // ADD THE NEW LI TO THE UL LIST
     ul.appendChild(taskItem);
     
@@ -48,6 +47,7 @@ function removeItem(e) {
     if (e.target.classList.contains('delete')) {
         const taskItem = e.target.parentElement;
         taskItem.classList.toggle('fade');
+        updateCheckRemove();
         setTimeout(() => {
         ul.removeChild(taskItem);
     }, 400)
@@ -60,18 +60,30 @@ function removeTaskItems() {
         
     const list = document.getElementById('items');
     while(list.firstChild) list.removeChild(list.firstChild);
-
+    updateCheckRemoveAll();
     }
 
-// function checkInput() {
-//     const newItem = document.getElementById('form-input').value;
-//     if (newItem == '') {
-//         alert('Please enter something');
-        
-//     }
 
+function updateCheckAdd() {
+    const allItems = document.getElementsByClassName('list-item');
+    document.getElementById('title').innerHTML =`${allItems.length + 1} tasks to complete today.`;
     
-// }
+}
+
+function updateCheckRemove() {
+    const allItems = document.getElementsByClassName('list-item');
+    document.getElementById('title').innerHTML =`${allItems.length -1} tasks to complete today.`;
+    
+}
+
+
+function updateCheckRemoveAll() {
+    const allItems = document.getElementsByClassName('list-item');
+    document.getElementById('title').innerHTML =`${allItems.length} tasks to complete today.`;
+    
+}
+
+
 
 
 
