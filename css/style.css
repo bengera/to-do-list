@@ -66,6 +66,9 @@ button.btn {
 .number-data {
   display: flex;
   justify-content: space-between; }
+  @media only screen and (max-width: 37.5em) {
+    .number-data {
+      flex-direction: column; } }
 
 /*Animations*/
 @keyframes append-animate {

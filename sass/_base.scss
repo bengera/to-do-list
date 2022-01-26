@@ -140,9 +140,12 @@ button.btn {
 }
 
 .number-data {
-  // border: 2px solid red;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+  }
 }
 
 
@@ -205,6 +208,7 @@ button.btn {
    }
    
 }
+
 
 
 
