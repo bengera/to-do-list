@@ -8,6 +8,20 @@ form.addEventListener('submit', addItem);
 ul.addEventListener('click', removeItem);
 deleteAll.addEventListener('click', removeTaskItems);
 
+let completed = 0;
+
+// CHECK TASK STRIKETHROUGH
+ul.addEventListener('click', (e) => {
+    
+    if (e.target.tagName.toLowerCase() === 'li') {
+        console.log('li action fired');
+        e.target.style.textDecoration = '#c8ccd4 line-through';
+        e.target.style.color = "#c8ccd4";
+        completed++;
+        document.getElementById('complete').innerText =`${completed} tasks completed today.`;
+        }
+})
+
 
 function addItem(e) {
     e.preventDefault();
@@ -56,6 +70,8 @@ function removeItem(e) {
 
     }
 }
+
+//REMOVALS AND UPADTES
 
 function removeTaskItems() {
         

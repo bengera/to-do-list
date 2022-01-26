@@ -52,15 +52,20 @@ p {
   background-color: #fff;
   border-top: 1px solid #393f49;
   border-radius: 10px;
+  padding: 0.5em 0.5em 0.3em 1.2em;
   color: #000;
-  padding: 0.4em 0.6em;
-  animation: append-animate .3s linear; }
+  animation: append-animate .3s linear;
+  cursor: pointer; }
 
 .fade {
   animation: fade-out .3s linear; }
 
 button.btn {
   float: right; }
+
+.number-data {
+  display: flex;
+  justify-content: space-between; }
 
 /*Animations*/
 @keyframes append-animate {

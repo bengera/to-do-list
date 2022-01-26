@@ -16,13 +16,17 @@
 
     <div class="container">
 
+        <div class="number-data">
         <p id="title">0 tasks to complete today.</p>
+        <p id="complete">0 tasks completed today.</p>
+    </div>
+
         <form id="form">
 
             <div class="input-group mb-3">
                 
                 <input id="form-input" type="text" class="form-control" placeholder="Enter a task..." aria-label="Enter a task..."
-                    aria-describedby="button-addon2">
+                    aria-describedby="button-addon2" required>
                 <input class="btn btn-primary" type="submit" value="Add Task">
                 <button id="btn-delete-all" type="button" class="btn btn-danger">Remove All</button>
             </div>
