@@ -36,6 +36,7 @@ function addItem(e) {
     // ADD THE NEW LI TO THE UL LIST
     ul.appendChild(taskItem);
     
+    
     form.reset();
 
     
@@ -66,20 +67,20 @@ function removeTaskItems() {
 
 function updateCheckAdd() {
     const allItems = document.getElementsByClassName('list-item');
-    document.getElementById('title').innerHTML =`${allItems.length + 1} tasks to complete today.`;
-    
+    document.getElementById('title').innerText =`${allItems.length + 1} tasks to complete today.`;
+        
 }
 
 function updateCheckRemove() {
     const allItems = document.getElementsByClassName('list-item');
-    document.getElementById('title').innerHTML =`${allItems.length -1} tasks to complete today.`;
+    document.getElementById('title').innerText =`${allItems.length -1} tasks to complete today.`;
     
 }
 
 
 function updateCheckRemoveAll() {
     const allItems = document.getElementsByClassName('list-item');
-    document.getElementById('title').innerHTML =`${allItems.length} tasks to complete today.`;
+    document.getElementById('title').innerText =`${allItems.length} tasks to complete today.`;
     
 }
 
@@ -92,6 +93,7 @@ function updateCheckRemoveAll() {
 
 // Toggle importance
 // Add date
+// Add difficulty for number of tasks to gamify the list
 
 
 // CSS

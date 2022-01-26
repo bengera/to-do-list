@@ -163,3 +163,44 @@ button.btn {
     opacity: 0;
   }
 }
+
+//MEDIA QUERIES
+
+.mb-3 {
+
+  @media only screen and (max-width: $bp-small) {
+    margin-bottom:1rem!important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+ }
+
+ @media only screen and (max-width: $bp-small) {
+  #form-input {
+    width: 100%;
+    margin-bottom: 1rem;
+   }
+}
+
+@media only screen and (max-width: $bp-small) {
+  input.btn {
+    width: 100%;
+    margin-bottom: 0.3rem;
+   }
+   
+}
+
+@media only screen and (max-width: $bp-small) {
+  #btn-delete-all {
+    width: 100%;
+   }
+   
+}
+
+
+
+ 
+ 
+ 
